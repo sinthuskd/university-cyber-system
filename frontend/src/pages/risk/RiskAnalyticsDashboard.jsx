@@ -1,3 +1,5 @@
+// Risk Analytics Dashboard - Visualizes risk trends and department-wise analysis
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { riskAPI } from '../../services/api';
 import {
