@@ -1,3 +1,5 @@
+// Risk Questionnaire - Handles user risk assessment questions and responses
+
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
