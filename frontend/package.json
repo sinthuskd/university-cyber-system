@@ -1,0 +1,55 @@
+{
+  "name": "university-cyber-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.22.0",
+    "react-hook-form": "^7.50.0",
+    "react-toastify": "^10.0.4",
+    "axios": "^1.6.7",
+    "lucide-react": "^0.330.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/user-event": "^14.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:legacy": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "start:mac": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "react-scripts build",
+    "build:legacy": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "test:risk": "react-scripts test --watchAll=false --testPathPattern=risk",
+    "test:verbose": "react-scripts test --watchAll=false --verbose",
+    "test:coverage": "react-scripts test --watchAll=false --coverage --coverageDirectory=coverage"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/pages/risk/**/*.{js,jsx}",
+      "src/services/api.js",
+      "!src/**/*.test.{js,jsx}",
+      "!src/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 70,
+        "branches": 60,
+        "functions": 70,
+        "lines": 70
+      }
+    }
+  },
+  "proxy": "http://localhost:8080",
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}
