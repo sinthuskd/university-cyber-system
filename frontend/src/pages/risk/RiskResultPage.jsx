@@ -1,3 +1,5 @@
+// Risk Result Page - Displays final risk score and personalized security recommendations
+
 import React, { useEffect, useState } from 'react';
 import { riskAPI } from '../../services/api';
 import { ShieldCheck, AlertTriangle, XCircle } from 'lucide-react';
